@@ -3,14 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Jordan Chung</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/07041012a9.js" crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class="intro">
-        <h1 id="welcome-text">Welcome</h1>
-        <p>Hi, I'm Jordan, a Computer Engineering student at Queen's University...</p>
+    <!-- Navbar Section -->
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                       
+                <i class="fa-solid fa-user">   Jordan Chung</i>   
+                
+            </a> 
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/about.html" class="navbar__links">About Me</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/projects.html" class="navbar__links">Projects</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/contact.html" class="navbar__links">Contact Me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <div class="main">
+
+        <div class="main__container">
+
+            <div class="main__content">
+                <h1>WELCOME</h1>
+                <h2>MY NAMES JORDAN</h2>
+                <p>Check out my projects and skills in technology and design.</p>
+                <button class="main__btn">
+                    <a href="/">About Me</a>
+                </button>
+
+            </div>
+
+            <div class="main__img--container">
+                <img src="images/pfp.jpg" alt="Headshot Photo" id="main__img">
+            </div>
+
+        </div>
+
     </div>
-    <script src="script.js"></script>
+
+    <!-- About Me Section -->
+
+    <div class="aboutme">
+        <div class="aboutme__container">
+            <div class="aboutme__img--container">
+                <img src="images/aboutmepic.jpg" alt="Photo" id="aboutme__img">
+            </div>
+            <div class="aboutme__content">
+                <h1>About Me</h1> 
+
+                <p>Hi! I'm Jordan, a computer engineering student and varsity athlete at Queen's University. 
+                    With a passion for technology, problem-solving, and design, I’ve worked on a variety 
+                    of projects in engineering, software development, and AI. I enjoy tackling 
+                    complex challenges and am always eager to learn and innovate.    </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Me</h2>
+                    <a href="">Resume</a>
+                    <a href="">Linkdin</a>
+                    <a href="">Github</a>
+                    <a href="">Email</a>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <script>src="scripts.js"</script>
 </body>
 </html>
