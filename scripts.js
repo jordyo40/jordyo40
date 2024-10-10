@@ -24,24 +24,3 @@ document.addEventListener("DOMContentLoaded", function () {
     typeEffect();
 });
 
-// fade in about me
-// Function to check if an element is in the viewport
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// Scroll event listener to apply the 'reveal' class when the element comes into view
-window.addEventListener('scroll', function() {
-    const aboutMeSection = document.querySelector('.aboutme__container');
-    if (aboutMeSection && isInViewport(aboutMeSection)) {
-        console.log("About Me section in view");
-
-        aboutMeSection.classList.add('reveal');
-    }
-});

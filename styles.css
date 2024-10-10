@@ -1,9 +1,16 @@
-* {
+* 
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 
 .navbar{
     background: #131313;
@@ -232,6 +239,7 @@
     width: 100%;
     max-width: 1300px;
     padding: 0 50px;
+    padding-bottom: 100px;
 
 }
 
@@ -403,8 +411,7 @@
     
 }
 
-/* About Me Section */
-
+/* About Me Section CSS */
 .aboutme {
     background-color: #141414; /* Keeps the dark theme consistent */
     padding: 50px 0; /* Adds padding around the section */
@@ -412,25 +419,14 @@
 
 .aboutme__container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns: one for image, one for text */
-    align-items: center;
+    grid-template-columns: 0.7fr 1fr; /* Two columns: one for image, one for text */
+    align-items: center; /* Vertically centers the content */
     justify-self: center;
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 50px;
-    height: 2000px;
-    
-    /* Initially hidden for the scroll effect */
-    opacity: 0; /* Hidden initially */
-    transform: translateY(30px); /* Slight upward translation */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
-}
-
-/* Class to trigger the reveal effect */
-.aboutme__container.reveal {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Moves to the original position */
+    padding-bottom: 150px;
 }
 
 .aboutme__img--container {
@@ -440,7 +436,7 @@
 #aboutme__img {
     height: auto;
     width: 100%;
-    max-width: 300px; /* Adjust image size */
+    max-width: 400px; /* Adjust image size */
     object-fit: cover; /* Ensures it maintains proportions */
 }
 
@@ -453,7 +449,7 @@
     font-size: 3rem;
     margin-bottom: 20px;
     background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-image: linear-gradient(to top, #ff0844 0%,  100%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -464,7 +460,7 @@
     font-size: 1.5rem;
     font-weight: 700;
     background-color: #f77062;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb14f 100%);
+    background-image: linear-gradient(to top, #ffb199 0%, #ffc8b7 100%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -486,5 +482,160 @@
 
     #aboutme__img {
         margin-bottom: 20px; /* Adds space between the image and text on mobile */
+    }
+}
+
+/* Projects Section */
+.projects {
+    background-color: #141414; 
+    padding: 50px 0; 
+}
+
+.projects__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+    text-align: center;
+    margin-bottom: 100px; /* Add some space below the projects section */
+
+}
+
+.projects__title {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 40px;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.projects__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+    gap: 30px;
+    align-items: center;
+}
+
+.project__card {
+    background-color: #1d1d1d;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project__card:hover {
+    transform: translateY(-10px);
+}
+
+.project__img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project__title {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, rgb(255, 106, 60) 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.project__description {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.801);
+    margin-bottom: 20px;
+}
+
+.project__link {
+    color: #f77062;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.project__link:hover {
+    color: #ffb14f;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .projects__content {
+        grid-template-columns: 1fr; /* Stack projects vertically on smaller screens */
+    }
+}
+
+/* Contact me section */
+
+/* Contact Me Section */
+.contactme {
+    background-color: #141414; /* Dark theme */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contactme__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.contactme__title {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 40px;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.contactme__links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contactme__link {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: #1d1d1d;
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contactme__link i {
+    font-size: 1.5rem;
+}
+
+.contactme__link:hover {
+    background-color: #f77062;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contactme__links {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        gap: 20px;
+    }
+
+    .contactme__link {
+        font-size: 1.2rem;
+        padding: 10px 20px;
     }
 }

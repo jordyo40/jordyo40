@@ -10,15 +10,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
-
+    <!-- For scroll ani (AOS) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <!-- Navbar Section -->
 
     <!-- Navbar Section -->
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="/" id="navbar__logo">
+            <a href="#top" id="navbar__logo">
                        
                 <i class="fa-solid fa-user">   Jordan Chung</i>   
                 
@@ -30,16 +30,16 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a href="/" class="navbar__links">Home</a>
+                    <a href="#top" class="navbar__links">Home</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/about.html" class="navbar__links">About Me</a>
+                    <a href="#aboutme__img" class="navbar__links">About Me</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/projects.html" class="navbar__links">Projects</a>
+                    <a href="#projects" class="navbar__links">Projects</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/contact.html" class="navbar__links">Contact Me</a>
+                    <a href="#contactme" class="navbar__links">Contact Me</a>
                 </li>
             </ul>
         </div>
@@ -52,7 +52,7 @@
 
         <div class="main__container">
 
-            <div class="main__content">
+            <div class="main__content" id="home">
                 <h1>WELCOME</h1>
                 <h2>MY NAMES JORDAN</h2>
                 <p>Check out my projects and skills in technology and design.</p>
@@ -73,11 +73,11 @@
     <!-- About Me Section -->
 
     <div class="aboutme">
-        <div class="aboutme__container">
-            <div class="aboutme__img--container">
+        <div class="aboutme__container" id="aboutme">
+            <div class="aboutme__img--container" data-aos="fade-up" data-aos-duration="1000">
                 <img src="images/aboutmepic.jpg" alt="Photo" id="aboutme__img">
             </div>
-            <div class="aboutme__content">
+            <div class="aboutme__content" data-aos="fade-up" data-aos-duration="1000">
                 <h1>About Me</h1> 
 
                 <p>Hi! I'm Jordan, a computer engineering student and varsity athlete at Queen's University. 
@@ -88,20 +88,81 @@
         </div>
     </div>
 
-    <!-- Footer Section -->
-    <div class="footer__container">
-        <div class="footer__links">
-            <div class="footer__link--wrapper">
-                <div class="footer__link--items">
-                    <h2>About Me</h2>
-                    <a href="">Resume</a>
-                    <a href="">Linkdin</a>
-                    <a href="">Github</a>
-                    <a href="">Email</a>
+    <!-- Projects Section -->
+    <div class="projects" id="projects">
+        <div class="projects__container">
+            <h1 class="projects__title" data-aos="fade-up" data-aos-duration="1000">Projects</h1>
+
+            <div class="projects__content">
+
+                <!-- Project 1 -->
+                <div class="project__card" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="images/qhdtpic.jpeg" alt="Project 1" class="project__img">
+                    <h2 class="project__title">Hyperloop Computer Vision Sensor System</h2>
+                    <p class="project__description">
+                        Working with the Queen's Hyerploop Design Team, this project involved building a computer vision safety system able to detect hazards infront the hyperloop pods track using object detection. The 
+                        system would then output a warning message to a website.  
+                    </p>
+                    <a href="project1.html" class="project__link">View Details</a>
                 </div>
-            </div> 
+
+                <!-- Project 2 -->
+                <div class="project__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="images/project2.jpg" alt="Project 2" class="project__img">
+                    <h2 class="project__title">Home Enviroment Monitor</h2>
+                    <p class="project__description">
+                        Designed a home enviroment monitor able to detect indoor environmental issues such as poor air quality and humidity changes using sensors. 
+                        The system aims to proactively alert homeowners to 
+                        potential hazards by displaying warnings, helping maintain healthier and safer living spaces.
+                    </p>
+                    <a href="project2.html" class="project__link">View Details</a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <img src="images/afdpic.jpg" alt="Project 3" class="project__img">
+                    <h2 class="project__title">Automated Fluid Dispenser</h2>
+                    <p class="project__description">
+                        Developed a dispenser system able to efficently and autonomously fill test beakers with liquid and a power of choice with the push of a button.
+                    </p>
+                    <a href="project3.html" class="project__link">View Details</a>
+                </div>
+
+            </div>
         </div>
     </div>
-    <script>src="scripts.js"</script>
+
+
+    <!-- Contact Me Section -->
+    <div class="contactme" id="contactme">
+        <div class="contactme__container">
+            <h1 class="contactme__title" data-aos="fade-up" data-aos-duration="1000">Contact Me</h1>
+            
+            <div class="contactme__links">
+                <a href="Jordan Chung Resume.pdf" target="_blank" class="contactme__link">
+                    <i class="fas fa-file-alt"></i> Resume
+                </a>
+                <a href="https://www.linkedin.com/in/jc-jordanchung/" target="_blank" class="contactme__link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/jordyo40" target="_blank" class="contactme__link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="mailto:jordan.chung@queensu.ca" class="contactme__link">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script defer>src="scripts.js"</script>
+    <!--     <script src="scripts.js" defer></script> -->
+
+    <!-- FOR AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
 </body>
 </html>
