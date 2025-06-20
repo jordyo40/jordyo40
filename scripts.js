@@ -1,3 +1,6 @@
+// scripts.js
+// This is a JavaScript file that will be loaded in the HTML document
+
 console.log("JavaScript file loaded correctly");
 
 const menu = document.querySelector('#mobile-menu')

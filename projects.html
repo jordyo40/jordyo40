@@ -1,0 +1,65 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan Chung – Projects</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/07041012a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html#top" id="navbar__logo">
+        <i class="fa-solid fa-user"></i> Jordan Chung
+      </a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="index.html#top" class="navbar__links">Home</a></li>
+        <li class="navbar__item"><a href="index.html#aboutme__img" class="navbar__links">About Me</a></li>
+        <li class="navbar__item"><a href="projects.html" class="navbar__links">Projects</a></li>
+        <li class="navbar__item"><a href="index.html#contactme" class="navbar__links">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="projects" id="projects">
+    <div class="projects__container">
+      <h1 class="projects__title">Project Details</h1>
+
+      <div class="projects__content">
+        <!-- Example project detail -->
+        <div class="project__card">
+          <img src="images/qhdtpic.jpeg" alt="Hyperloop Project" class="project__img">
+          <h2 class="project__title">Hyperloop Computer Vision Sensor System</h2>
+          <p class="project__description">
+            Built an object detection system as part of the Queen's Hyperloop Design Team, aimed at detecting obstacles and hazards on the pod's track using deep learning and computer vision techniques. Integrated model with real-time feedback loops to ensure proactive safety monitoring.
+          </p>
+        </div>
+
+        <div class="project__card">
+          <img src="images/elec290.jpg" alt="Home Monitor" class="project__img">
+          <h2 class="project__title">Home Environment Monitor</h2>
+          <p class="project__description">
+            Created a sensor-driven environmental monitoring system to detect changes in humidity, air quality, and temperature. Displayed warnings via an LED interface and web dashboard for home health and safety.
+          </p>
+        </div>
+
+        <div class="project__card">
+          <img src="images/robomaster.png" alt="Robomaster" class="project__img">
+          <h2 class="project__title">Computer Vision for RoboMasters</h2>
+          <p class="project__description">
+            Developed an AI-powered model to detect and track opponent robots during matches by identifying LED armor color patterns. Used for strategic positioning and real-time data collection in the RoboMaster competition.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,16 +1,23 @@
-## Hi there 👋
+# Jordan Chung – Personal Website
 
-<!--
-**jordyo40/jordyo40** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This is my personal website, built to showcase my background, skills, and projects as a Computer Engineering student at Queen's University.
 
-Here are some ideas to get you started:
+🔗 [View the site here](https://jordyo40.github.io/jordyo40/)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## ✨ About
+
+The website features:
+- A short introduction about me
+- Selected technical projects
+- Links to my resume, LinkedIn, and GitHub
+
+## 🚀 Built With
+
+- HTML
+- CSS
+- JavaScript / React (if applicable)
+- Hosted with GitHub Pages
+
+## 📫 Contact
+
+Feel free to connect with me through [LinkedIn](https://www.linkedin.com/in/YOURUSERNAME) or check out my other work on [GitHub](https://github.com/jordyo40).

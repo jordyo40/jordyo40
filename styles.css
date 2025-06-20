@@ -1,3 +1,4 @@
+/* styles.css */
 * 
 {
     box-sizing: border-box;
@@ -634,7 +635,7 @@ html {
         gap: 20px;
     }
 
-    .contactme__link {
+    .contactme__link {  
         font-size: 1.2rem;
         padding: 10px 20px;
     }
