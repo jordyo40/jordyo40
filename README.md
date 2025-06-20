@@ -20,4 +20,4 @@ The website features:
 
 ## 📫 Contact
 
-Feel free to connect with me through [LinkedIn](https://www.linkedin.com/in/YOURUSERNAME) or check out my other work on [GitHub](https://github.com/jordyo40).
+Feel free to connect with me through [LinkedIn](https://www.linkedin.com/in/jc-jordanchung/) or check out my other work on [GitHub](https://github.com/jordyo40).
