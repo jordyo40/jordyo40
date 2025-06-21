@@ -15,7 +15,7 @@ The website features:
 
 - HTML
 - CSS
-- JavaScript / React (if applicable)
+- JavaScript
 - Hosted with GitHub Pages
 
 ## 📫 Contact
