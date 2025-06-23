@@ -1,6 +1,6 @@
-# Jordan Chung – Personal Website
+# Jordan Chung Portfolio
 
-This is my personal website, built to showcase my background, skills, and projects as a Computer Engineering student at Queen's University.
+Hey! This is my Portfolio, built to showcase my background, skills, and projects as a Computer Engineering student at Queen's University.
 
 🔗 [View the site here](https://jordyo40.github.io/jordyo40/)
 
