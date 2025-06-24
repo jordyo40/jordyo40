@@ -1,158 +1,224 @@
-<!-- projects.html -->
+<!-- projects.html (cleaned) -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jordan Chung – Projects</title>
-  <!-- Main site stylesheet & icon kit -->
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://kit.fontawesome.com/07041012a9.js" crossorigin="anonymous"></script>
-  <!-- Google Font used on index.html so nav matches perfectly -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jordan Chung – Projects</title>
+    <!-- Main stylesheet + Font Awesome -->
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/07041012a9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Font (matches index.html) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <style>
-    /* Local tweaks specific to projects page */
-    body {
-      background-color: #141414; /* ensure full‑page dark background */
-      min-height: 100vh;
-      margin: 0;
-    }
-    .projects__content {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .project__card {
-      display: flex;
-      align-items: flex-start;
-      gap: 30px;
-      background-color: #1d1d1d;
-      padding: 30px;
-      border-radius: 20px;
-      width: 100%;
-      min-height: 230px;      /* every grey box now at least 230 px tall */
-    }
-    .project__card img {
-      width: 200px;
-      height: 200px;
-      height: auto;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-    .project__text {
-      text-align: left;
-      flex: 1;
-    }
-    .project__title {
-      font-size: 1.6rem;
-      color: transparent;
-      background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-      -webkit-background-clip: text;
-      font-family: 'Kumbh Sans', sans-serif;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .project__description {
-      font-size: 1.1rem;
-      color: #ffffff;
-      font-family: 'Kumbh Sans', sans-serif;
-      line-height: 1.6;
-    }
-    /* Responsive – stack image on top for narrow screens */
-    @media screen and (max-width: 768px) {
-      .project__card {
+    <style>
+      /* Page‑specific tweaks */
+      body {
+        background: #141414;
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      .projects__content {
+        display: flex;
         flex-direction: column;
+        gap: 40px;
+      }
+
+      .project__card {
+        display: flex;
         align-items: center;
+        gap: 30px;
+        background: #1d1d1d;
+        padding: 30px;
+        border-radius: 20px;
+        width: 100%;
+        height: 230px;
       }
       .project__card img {
-        width: 80%;
-        max-width: 300px;
+        width: 200px;
+        height: 200px;
+        border-radius: 8px;
+        object-fit: contain; /* show whole logo without stretching or cropping */
       }
+
       .project__text {
-        text-align: center;
+        flex: 1;
+        text-align: left;
       }
-    }
-  </style>
-</head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="index.html#top" id="navbar__logo">
-        <i class="fa-solid fa-user">  JORDAN CHUNG</i>
-      </a>
+      .project__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.6rem;
+        color: transparent;
+        background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+        -webkit-background-clip: text;
+        font-family: "Kumbh Sans", sans-serif;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .project__description {
+        font-size: 1.1rem;
+        color: #fff;
+        font-family: "Kumbh Sans", sans-serif;
+        line-height: 1.6;
+      }
 
-      <div class="navbar__toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      .github-link {
+        color: inherit;
+        font-size: 1.35rem;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .project__card {
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+        }
+        .project__card img {
+          width: 80%;
+          max-width: 300px;
+          height: auto;
+        }
+        .project__title {
+          flex-direction: column;
+          gap: 8px;
+        }
+        .project__text {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar (same as index.html) -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html#top" id="navbar__logo"
+          ><i class="fa-solid fa-user">&nbsp;&nbsp;Jordan Chung</i></a
+        >
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span><span class="bar"></span
+          ><span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html#top" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="index.html#aboutme__img" class="navbar__links">About Me</a>
+          </li>
+          <li class="navbar__item">
+            <a href="projects.html" class="navbar__links">Projects</a>
+          </li>
+          <li class="navbar__item">
+            <a href="index.html#contactme" class="navbar__links">Contact Me</a>
+          </li>
+        </ul>
       </div>
-      <ul class="navbar__menu">
-        <li class="navbar__item"><a href="index.html#top" class="navbar__links">Home</a></li>
-        <li class="navbar__item"><a href="index.html#aboutme__img" class="navbar__links">About Me</a></li>
-        <li class="navbar__item"><a href="projects.html" class="navbar__links">Projects</a></li>
-        <li class="navbar__item"><a href="index.html#contactme" class="navbar__links">Contact Me</a></li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Projects section -->
-  <div class="projects" id="projects">
-    <div class="projects__container">
-      <h1 class="projects__title">Project Details</h1>
+    <!-- Projects section -->
+    <section class="projects" id="projects">
+      <div class="projects__container">
+        <h1 class="projects__title">Project Details</h1>
 
-      <div class="projects__content">
-        <!-- Hyperloop -->
-        <div class="project__card">
-          <img src="images/qhdtpic.jpeg" alt="Hyperloop Project">
-          <div class="project__text">
-            <h2 class="project__title">
-              Hyperloop Computer Vision Sensor System
-              <a href="https://github.com/jordyo40/QHDT-Sensor-System" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+        <div class="projects__content">
+          <!-- GitHire -->
+          <div class="project__card">
+            <img src="images/githire_logo.png" alt="GitHire Logo" />
+            <div class="project__text">
+              <h2 class="project__title">
+                GitHire
+                <a
+                  href="https://github.com/jeffrey-huang-yz/git-hired"
+                  target="_blank"
+                  class="github-link"
+                  title="View code"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </h2>
+              <p class="project__description">GitHired is a web application that helps companies discover developers whose Github experience matches the exact skill set of an open role. Github repositories are often overlooked by recruiters, but by automatically parsing public repositories, commit history, and language usage, GitHired surfaces candidates based on what they’ve actually built, not just what they list on a resume.
 
-            </h2>
-            <p class="project__description">
-              Words, blah blah blah...
-            </p>  
+</p>
+            </div>
+          </div>
+
+          <!-- Hyperloop -->
+          <div class="project__card">
+            <img src="images/qhdtpic.jpeg" alt="Hyperloop Project" />
+            <div class="project__text">
+              <h2 class="project__title">
+                Hyperloop Computer Vision Sensor System
+                <a
+                  href="https://github.com/jordyo40/QHDT-Sensor-System"
+                  target="_blank"
+                  class="github-link"
+                  title="View code"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </h2>
+              <p class="project__description">Working with the Queen's Hyerploop Design Team, this project involved building a computer vision safety system able to detect hazards infront the hyperloop pods track using object detection. The system was then designed to output its detected object to a web interface for the user to view.</p>
+</p>
+            </div>
+          </div>
+
+          <!-- Home Monitor -->
+          <div class="project__card">
+            <img src="images/elec290.jpg" alt="Home Environment Monitor" />
+            <div class="project__text">
+              <h2 class="project__title">
+                Home Environment Monitor
+                <a
+                  href="https://github.com/MaxUger/home-environment-monitoring-system"
+                  target="_blank"
+                  class="github-link"
+                  title="View code"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </h2>
+              <p class="project__description">Designed a home enviroment monitor able to detect indoor environmental issues such as poor air quality or humidity changes using sensors. 
+                        The system aims to proactively alert homeowners to 
+                        potential hazards by displaying warnings, helping maintain healthier and safer living spaces.</p>
+            </div>
+          </div>
+
+          <!-- RoboMaster -->
+          <div class="project__card">
+            <img src="images/robomaster.png" alt="RoboMaster Computer Vision Model" />
+            <div class="project__text">
+              <h2 class="project__title">
+                RoboMaster CV Model
+                <a
+                  href="https://github.com/danielquinn510/Robot-Detection-Tracking"
+                  target="_blank"
+                  class="github-link"
+                  title="View code"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </h2>
+              <p class="project__description">Developed and trained a computer vision model for the Queen's Knights Robotics Team to 
+                        identify and track opponent robots based on LED armor plate colors in the RoboMaster competition. Our research for this project was presented at CUCAI, the largest undergraduate AI conference in Canada.</p>
+            </div>
           </div>
         </div>
-
-        <!-- Home Monitor -->
-        <div class="project__card">
-          <img src="images/elec290.jpg" alt="Home Environment Monitor">
-          <div class="project__text">
-            <h2 class="project__title">
-              Home Environment Monitor &nbsp;
-              <a href="https://github.com/MaxUger/home-environment-monitoring-system" target="_blank" style="color:inherit;"><i class="fab fa-github"></i></a>
-            </h2>
-            <p class="project__description">
-              Words, blah blah blah...
-            </p>
-          </div>
-        </div>
-
-        <!-- RoboMaster -->
-        <div class="project__card">
-          <img src="images/robomaster.png" alt="RoboMaster CV Model">
-          <div class="project__text">
-            <h2 class="project__title">
-              RoboMaster CV Model &nbsp;
-              <a href="https://github.com/danielquinn510/Robot-Detection-Tracking" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
-            </h2>
-            <p class="project__description">
-              Words, blah blah blah...
-            </p>
-          </div>
-        </div>
-
+        <!-- /.projects__content -->
       </div>
-    </div>
-  </div>
+      <!-- /.projects__container -->
+    </section>
 
-  <script defer>src="scripts.js"</script>
-</body>
+    <script defer>
+      src = "scripts.js";
+    </script>
+  </body>
 </html>
