@@ -2,18 +2,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jordan Chung – Projects</title>
+  <!-- Main site stylesheet & icon kit -->
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/07041012a9.js" crossorigin="anonymous"></script>
+  <!-- Google Font used on index.html so nav matches perfectly -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    /* Local tweaks specific to projects page */
+    body {
+      background-color: #141414; /* ensure full‑page dark background */
+      min-height: 100vh;
+      margin: 0;
+    }
+    .projects__content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .project__card {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      background-color: #1d1d1d;
+      padding: 30px;
+      border-radius: 20px;
+      width: 100%;
+      min-height: 230px;      /* every grey box now at least 230 px tall */
+    }
+    .project__card img {
+      width: 200px;
+      height: 200px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .project__text {
+      text-align: left;
+      flex: 1;
+    }
+    .project__title {
+      font-size: 1.6rem;
+      color: transparent;
+      background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+      -webkit-background-clip: text;
+      font-family: 'Kumbh Sans', sans-serif;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .project__description {
+      font-size: 1.1rem;
+      color: #ffffff;
+      font-family: 'Kumbh Sans', sans-serif;
+      line-height: 1.6;
+    }
+    /* Responsive – stack image on top for narrow screens */
+    @media screen and (max-width: 768px) {
+      .project__card {
+        flex-direction: column;
+        align-items: center;
+      }
+      .project__card img {
+        width: 80%;
+        max-width: 300px;
+      }
+      .project__text {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar__container">
       <a href="index.html#top" id="navbar__logo">
-        <i class="fa-solid fa-user"></i> Jordan Chung
+        <i class="fa-solid fa-user">  JORDAN CHUNG</i>
       </a>
+
       <div class="navbar__toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -28,38 +100,59 @@
     </div>
   </nav>
 
+  <!-- Projects section -->
   <div class="projects" id="projects">
     <div class="projects__container">
       <h1 class="projects__title">Project Details</h1>
 
       <div class="projects__content">
-        <!-- Example project detail -->
+        <!-- Hyperloop -->
         <div class="project__card">
-          <img src="images/qhdtpic.jpeg" alt="Hyperloop Project" class="project__img">
-          <h2 class="project__title">Hyperloop Computer Vision Sensor System</h2>
-          <p class="project__description">
-            Built an object detection system as part of the Queen's Hyperloop Design Team, aimed at detecting obstacles and hazards on the pod's track using deep learning and computer vision techniques. Integrated model with real-time feedback loops to ensure proactive safety monitoring.
-          </p>
+          <img src="images/qhdtpic.jpeg" alt="Hyperloop Project">
+          <div class="project__text">
+            <h2 class="project__title">
+              Hyperloop Computer Vision Sensor System
+              <a href="https://github.com/jordyo40/QHDT-Sensor-System" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+
+            </h2>
+            <p class="project__description">
+              Words, blah blah blah...
+            </p>  
+          </div>
         </div>
 
+        <!-- Home Monitor -->
         <div class="project__card">
-          <img src="images/elec290.jpg" alt="Home Monitor" class="project__img">
-          <h2 class="project__title">Home Environment Monitor</h2>
-          <p class="project__description">
-            Created a sensor-driven environmental monitoring system to detect changes in humidity, air quality, and temperature. Displayed warnings via an LED interface and web dashboard for home health and safety.
-          </p>
+          <img src="images/elec290.jpg" alt="Home Environment Monitor">
+          <div class="project__text">
+            <h2 class="project__title">
+              Home Environment Monitor &nbsp;
+              <a href="https://github.com/MaxUger/home-environment-monitoring-system" target="_blank" style="color:inherit;"><i class="fab fa-github"></i></a>
+            </h2>
+            <p class="project__description">
+              Words, blah blah blah...
+            </p>
+          </div>
         </div>
 
+        <!-- RoboMaster -->
         <div class="project__card">
-          <img src="images/robomaster.png" alt="Robomaster" class="project__img">
-          <h2 class="project__title">Computer Vision for RoboMasters</h2>
-          <p class="project__description">
-            Developed an AI-powered model to detect and track opponent robots during matches by identifying LED armor color patterns. Used for strategic positioning and real-time data collection in the RoboMaster competition.
-          </p>
+          <img src="images/robomaster.png" alt="RoboMaster CV Model">
+          <div class="project__text">
+            <h2 class="project__title">
+              RoboMaster CV Model &nbsp;
+              <a href="https://github.com/danielquinn510/Robot-Detection-Tracking" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+            </h2>
+            <p class="project__description">
+              Words, blah blah blah...
+            </p>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
 
+  <script defer>src="scripts.js"</script>
 </body>
 </html>

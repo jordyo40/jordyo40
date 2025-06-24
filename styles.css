@@ -306,7 +306,7 @@ html {
     left: 0;
     width: 0;
     height: 100%;
-    background: #ff9137;
+    background: #ff0844;
     transition: all 0.5s;
     border-radius: 4px;
 }
@@ -640,3 +640,13 @@ html {
         padding: 10px 20px;
     }
 }
+
+/* MORE PROJECTS SECTION */
+
+.project__title {
+  display: flex;                 /* turn the <h2> into a flex container     */
+  justify-content: space-between;/* text left, icon right                   */
+  align-items: center;           /* vertical alignment of text & icon        */
+}
+
+
